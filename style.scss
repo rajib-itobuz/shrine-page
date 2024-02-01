@@ -24,98 +24,10 @@ $input-background: #2f3032;
     font-size: 16px;
 }
 
-.services-title,
-.card-title {
-    font-family: "Roboto Serif", serif;
-}
 
-.hero-house {
-    flex-grow: 8;
-    height: 80vh;
-    width: 100%;
-    background: url(images/hero/hero-house.svg) no-repeat center;
-    background-size: cover;
-}
-
-.glitten-all-caps {
-    font-family: "Glitten All Caps", serif;
-}
-
-.hero-wrapper {
-    height: 80vh;
-    width: 100%;
-    flex-grow: 16;
-}
-
-.hero-girl {
-    flex-grow: 6;
-    background: url(images/hero/hero-girl.svg) no-repeat center;
-    background-size: cover;
-}
-
-.calendar-card {
-    background: url(images/events/Calendar.svg) no-repeat center;
-    background-color: black;
-    width: 55px;
-    height: 50px;
-    left: 5%;
-}
-
-
-.hover-card {
-    transition: transform 100ms ease-in-out;
-
-    &:hover {
-        transform: translate(0px, -4px);
-        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    }
-}
-
-.hover-icon {
-    transition: transform 500ms ease;
-
-    &:hover {
-        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(46deg) brightness(106%) contrast(101%);
-    }
-}
-
-
-.hover-link {
-    //transition: transform 100ms ease-in-out;
-
-    &:hover::after {
-        // color: #000;
-        // font-weight: 700;
-
-    }
-}
-
-.hover-button {
-    transition: all 200ms ease;
-
-    &:hover {
-        background-color: #000 !important;
-        color: white !important;
-    }
-}
-
+/*! GLOBAL CLASSES */
 .font-tertiary {
     color: $font-tertiary !important;
-}
-
-.hero-book {
-    flex-grow: 6;
-    background: url(images/hero/hero-book.svg) no-repeat center;
-    background-size: cover;
-}
-
-.service-card {
-    border-radius: 2rem 2rem 2rem 0 !important;
-    width: 90%;
-
-    span {
-        padding: 2px 8px 5px 8px;
-    }
 }
 
 .font-base {
@@ -124,6 +36,10 @@ $input-background: #2f3032;
 
 .text-mw-55 {
     width: 100%;
+}
+
+input::placeholder {
+    font-size: 0.8rem;
 }
 
 .bg-input {
@@ -154,10 +70,53 @@ $input-background: #2f3032;
     font-size: 0.6rem;
 }
 
-
 .fit-content {
     width: fit-content;
     height: fit-content;
+}
+
+.glitten-all-caps {
+    font-family: "Glitten All Caps", serif;
+}
+
+.hover-card {
+    transition: transform 100ms ease-in-out;
+
+    &:hover {
+        transform: translate(0px, -4px);
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    }
+}
+
+.hover-icon {
+    transition: transform 500ms ease;
+
+    &:hover {
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(46deg) brightness(106%) contrast(101%);
+    }
+}
+
+.hover-button {
+    transition: all 200ms ease;
+
+    &:hover {
+        background-color: #000 !important;
+        color: white !important;
+    }
+}
+
+
+/*! Font Family ROBOTO SERIF */
+.services-title,
+.card-title {
+    font-family: "Roboto Serif", serif;
+}
+
+
+/*! navbar */
+.navbar-logo {
+    translate: 0% 30%;
+    background: #fff;
 }
 
 .nav-item:hover .nav-link::before {
@@ -180,11 +139,71 @@ $input-background: #2f3032;
     height: 2px;
 }
 
-.navbar-logo {
-    translate: 0% 30%;
-    background: #fff;
+
+
+/*! Hero Section */
+.hero-house {
+    flex-grow: 8;
+    height: 80vh;
+    width: 100%;
+    background: url(images/hero/hero-house.svg) no-repeat center;
+    background-size: cover;
 }
 
+.hero-wrapper {
+    height: 80vh;
+    width: 100%;
+    flex-grow: 16;
+}
+
+.hero-girl {
+    flex-grow: 6;
+    background: url(images/hero/hero-girl.svg) no-repeat center;
+    background-size: cover;
+}
+
+.hero-book {
+    flex-grow: 6;
+    background: url(images/hero/hero-book.svg) no-repeat center;
+    background-size: cover;
+}
+
+
+
+/*! Service card */
+.service-card {
+    border-radius: 2rem 2rem 2rem 0 !important;
+    width: 90%;
+
+    span {
+        padding: 2px 8px 5px 8px;
+    }
+
+    .illustration-woman {
+        right: -5%;
+    }
+}
+
+
+/*! Events section */
+.calendar-card {
+    background: url(images/events/Calendar.svg) no-repeat center;
+    background-color: black;
+    width: 55px;
+    height: 50px;
+    left: 5%;
+}
+
+.event-wrapper {
+    .card {
+        max-width: 18rem;
+    }
+
+}
+
+
+
+/*! Footer section */
 .illustration-footer {
     bottom: -50px;
     right: 0px;
@@ -197,25 +216,18 @@ $input-background: #2f3032;
     background-size: cover;
 }
 
-input::placeholder {
-    font-size: 0.8rem;
-}
 
-.event-wrapper{
-    .card{
-        max-width: 18rem;
-    }
 
-}
-
+/*! Media 768px */
 @media screen and (min-width:768px) {
-    .event-wrapper{
-        .card{
+    .event-wrapper {
+        .card {
             max-width: unset;
             min-width: 18rem;
         }
-    
+
     }
+
     .text-mw-55 {
         width: 55%;
     }
@@ -239,15 +251,17 @@ input::placeholder {
 
 }
 
+
+/*! Media 992px */
 @media screen and (min-width:992px) {
     .font-16 {
         font-size: 1rem;
     }
-    
+
     .font-26 {
         font-size: 1.4rem;
     }
-    
+
     .font-10 {
         font-size: 0.75rem;
     }
