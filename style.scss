@@ -139,7 +139,11 @@ input::placeholder {
     height: 2px;
 }
 
-
+/*! Bread crumb section */
+.hover-breadcrumb:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
 
 /*! Hero Section */
 .hero-house {
