@@ -198,7 +198,7 @@ input::placeholder {
 .illustration-footer {
   bottom: -50px;
   right: 0px;
-  transform: translate(30%);
+  transform: translate(0%);
 }
 
 .footer-section {
